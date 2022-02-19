@@ -1,0 +1,11 @@
+[package]
+name = "tide-adapter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tide = { git = "https://github.com/logankeenan/tide.git", branch = "wasm", features = ["wasm"], default-features = false }
+javascript-adapter = { git = "https://github.com/rora-rs/javascript-adapter.git", branch = "main" }
+worker = "0.0.7"
