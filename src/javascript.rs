@@ -1,11 +1,11 @@
 use std::str::FromStr;
-use javascript_adapter::{JsRequest, JsResponse};
+use rora_javascript_adapter::{JsRequest, JsResponse};
 use tide::http::{Method, Url, Request as TideRequest, Response as TideResponse};
 
 pub async fn to_response(mut tide_response: TideResponse) -> JsResponse {
     let mut response = JsResponse::new();
     response.body = Some(tide_response.body_string().await.unwrap());
-    response.set_status_code(tide_response.status().to_string());
+    response.status_code = tide_response.status().to_string();
 
     tide_response.header_names().for_each(|header_name| {
         let header_value = tide_response.header(header_name).unwrap();
