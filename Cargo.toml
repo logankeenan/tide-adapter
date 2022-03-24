@@ -11,5 +11,5 @@ repository = "https://github.com/rora-rs/tide-adapter"
 [dependencies]
 tide = { git = "https://github.com/logankeenan/tide.git", branch = "wasm", features = ["wasm"], default-features = false }
 #rora-javascript-adapter = { path = "../rora-javascript-adapter" }
-rora-javascript-adapter = "0.0.1"
+rora-javascript-adapter = "0.0.2"
 worker = "0.0.7"
